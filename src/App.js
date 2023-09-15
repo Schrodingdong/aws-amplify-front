@@ -22,12 +22,9 @@ function App() {
         exponent: exponent
       }
     ).then( result => {
-      setresult(result.result);
+      setresult(result.data.result);
       setShowResult(true);
     })
-
-
-
   }
 
   const closePopup = () => {
@@ -67,7 +64,6 @@ const Result = ({result, closePopup}) => {
   return (
     <div className='result' onClick={closePopup}>
       <div className='popup'>
-        {/* <FaWindowClose className='absolute top right' onClick={closePopup()}/> */}
         <h1>Result</h1>
         <h3>{result}</h3>
       </div>
